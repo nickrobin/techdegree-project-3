@@ -15,7 +15,7 @@
       <h1>Full Stack Conf</h1>
     </header>
 
-    <form action="index.html" method="post">
+    <form id="register" action="index.html" method="post">
 
       <fieldset>
         <legend>Basic Info</legend>
@@ -23,8 +23,8 @@
         <label for="name">Name:</label>
         <input type="text" id="name" name="user_name" autofocus>
 
-        <label for="mail">Email:</label>
-        <input type="email" id="mail" name="user_email">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="user_email">
 
         <label for="title">Job Role</label>
         <select id="title" name="user_title">
@@ -65,6 +65,7 @@
         <div id="colors-js-puns" class="">
           <label for="color">Color:</label>
           <select id="color">
+            <option value="choose" disabled> Choose Color</option>
             <option value="cornflowerblue">Cornflower Blue (JS Puns shirt only)</option>
             <option value="darkslategrey">Dark Slate Grey (JS Puns shirt only)</option>
             <option value="gold">Gold (JS Puns shirt only)</option>
@@ -76,19 +77,19 @@
       </fieldset>
 
       <fieldset class="activities">
-        <legend>Register for Activities</legend>
-        <label><input type="checkbox" name="all"> Main Conference — $200</label>
-        <label><input type="checkbox" name="js-frameworks"> JavaScript Frameworks Workshop — Tuesday 9am-12pm, $100</label>
-        <label><input type="checkbox" name="js-libs"> JavaScript Libraries Workshop — Tuesday 1pm-4pm, $100</label>
-        <label><input type="checkbox" name="express"> Express Workshop — Tuesday 9am-12pm, $100</label>
-        <label><input type="checkbox" name="node"> Node.js Workshop — Tuesday 1pm-4pm, $100</label>
-        <label><input type="checkbox" name="build-tools"> Build tools Workshop — Wednesday 9am-12pm, $100</label>
-        <label><input type="checkbox" name="npm"> npm Workshop — Wednesday 1pm-4pm, $100</label>
-
+        <legend id="register-legend">Register for Activities</legend>
+        <label><input type="checkbox" name="all" data-cost="200" > Main Conference — $200</label>
+        <label><input type="checkbox" name="js-frameworks" data-cost="100" data-session="tuesday-1"> JavaScript Frameworks Workshop — Tuesday 9am-12pm, $100</label>
+        <label><input type="checkbox" name="js-libs" data-cost="100" data-session="tuesday-2"> JavaScript Libraries Workshop — Tuesday 1pm-4pm, $100</label>
+        <label><input type="checkbox" name="express" data-cost="100" data-session="tuesday-1"> Express Workshop — Tuesday 9am-12pm, $100</label>
+        <label><input type="checkbox" name="node" data-cost="100" data-session="tuesday-2"> Node.js Workshop — Tuesday 1pm-4pm, $100</label>
+        <label><input type="checkbox" name="build-tools" data-cost="100"> Build tools Workshop — Wednesday 9am-12pm, $100</label>
+        <label><input type="checkbox" name="npm" data-cost="100"> npm Workshop — Wednesday 1pm-4pm, $100</label>
       </fieldset>
+
+
       <fieldset>
         <legend>Payment Info</legend>
-
         <label for="payment">I'm going to pay with:</label>
         <select id="payment" name="user_payment">
           <option value="select_method">Select Payment Method</option>
