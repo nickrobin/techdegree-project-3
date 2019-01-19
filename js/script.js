@@ -1,3 +1,5 @@
+$( document ).ready(function() {
+
 const $name = $('#name');
 const $email = $('#email');
 const $title = $('#other-title');
@@ -17,7 +19,6 @@ let totalCost;
 
 $('#other-title').hide().prev().hide();
 $('#colors-js-puns').hide();
-$('#credit-card').hide();
 $('#paypal').hide();
 $('#bitcoin').hide();
 $('.activities').append(`<span> Total Registration Cost: $0 </span>`);
@@ -135,9 +136,12 @@ $('#title').change((e) => {
 // there has to be a better way to do this by adding data-attribute to the difference selectors
 $('#design').change((e) => {
 
-  if (e.target.value === "js puns") {
-    $('#colors-js-puns').show();
 
+$('#colors-js-puns').show();
+
+
+  if (e.target.value === "js puns")
+  {
     $('#color option[value="dimgrey"]').hide();
     $('#color option[value="tomato"]').hide();
     $('#color option[value="steelblue"]').hide();
@@ -146,10 +150,8 @@ $('#design').change((e) => {
     $('#color option[value="cornflowerblue"]').show();
     $('#color option[value="darkslategrey"]').show();
     $('#color option[value="gold"]').show();
-  }
-
-  if (e.target.value === "heart js") {
-    $('#colors-js-puns').show();
+  } else if (e.target.value === "heart js")
+  {
     $('#color option[value="cornflowerblue"]').hide();
     $('#color option[value="darkslategrey"]').hide();
     $('#color option[value="gold"]').hide();
@@ -188,8 +190,6 @@ $registration.change(function() {
   }
 });
 
-
-
 //on change of payment drop down, show the relevant fields below
 $('#payment').change((e) => {
   //quicky and dirty, hide everything, show the target
@@ -198,8 +198,6 @@ $('#payment').change((e) => {
   $('#bitcoin').hide();
   $(`#${e.target.value}`).show();
 });
-
-
 
 $('button').click((e) => {
 
@@ -228,4 +226,6 @@ $('button').click((e) => {
   } else {
     console.log(" Cannot Submit Form - Invalid Fields");
   }
+});
+
 });

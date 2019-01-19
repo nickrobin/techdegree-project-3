@@ -65,7 +65,7 @@
         <div id="colors-js-puns" class="">
           <label for="color">Color:</label>
           <select id="color">
-            <option value="choose" disabled> Choose Color</option>
+            <option selected disabled hidden>Select Color</option>
             <option value="cornflowerblue">Cornflower Blue (JS Puns shirt only)</option>
             <option value="darkslategrey">Dark Slate Grey (JS Puns shirt only)</option>
             <option value="gold">Gold (JS Puns shirt only)</option>
@@ -92,8 +92,8 @@
         <legend>Payment Info</legend>
         <label for="payment">I'm going to pay with:</label>
         <select id="payment" name="user_payment">
-          <option value="select_method">Select Payment Method</option>
-          <option value="credit-card">Credit Card</option>
+          <option disabled value="select_method">Select Payment Method</option>
+          <option value="credit-card" selected>Credit Card</option>
           <option value="paypal">PayPal</option>
           <option value="bitcoin">Bitcoin</option>
         </select>
