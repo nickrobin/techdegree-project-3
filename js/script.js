@@ -136,29 +136,28 @@ $('#title').change((e) => {
 // there has to be a better way to do this by adding data-attribute to the difference selectors
 $('#design').change((e) => {
 
-
-$('#colors-js-puns').show();
-
+  $('#colors-js-puns').show();
 
   if (e.target.value === "js puns")
   {
-    $('#color option[value="dimgrey"]').hide();
-    $('#color option[value="tomato"]').hide();
-    $('#color option[value="steelblue"]').hide();
+    $('#color option[value="dimgrey"]').hide().removeAttr("selected");
+    $('#color option[value="tomato"]').hide().removeAttr("selected");
+    $('#color option[value="steelblue"]').hide().removeAttr("selected");;
 
 
-    $('#color option[value="cornflowerblue"]').show();
+    $('#color option[value="cornflowerblue"]').show().attr("selected","selected");;
     $('#color option[value="darkslategrey"]').show();
     $('#color option[value="gold"]').show();
+
   } else if (e.target.value === "heart js")
   {
-    $('#color option[value="cornflowerblue"]').hide();
-    $('#color option[value="darkslategrey"]').hide();
-    $('#color option[value="gold"]').hide();
+    $('#color option[value="cornflowerblue"]').hide().removeAttr("selected");;
+    $('#color option[value="darkslategrey"]').hide().removeAttr("selected");;
+    $('#color option[value="gold"]').hide().removeAttr("selected");;
 
-    $('#color option[value="dimgrey"]').show();
-    $('#color option[value="tomato"]').show();
+    $('#color option[value="tomato"]').show().attr("selected","selected");
     $('#color option[value="steelblue"]').show();
+    $('#color option[value="dimgrey"]').show();
   }
 });
 
